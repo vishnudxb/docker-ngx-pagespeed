@@ -1,0 +1,8 @@
+server {
+    listen 80;
+    listen 443 ssl spdy;
+    pagespeed on;
+    pagespeed RewriteLevel PassThrough;
+    pagespeed EnableFilters remove_comments,rewrite_javascript;
+    pagespeed FileCachePath /var/pagespeed/cache;
+}
